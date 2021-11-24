@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cart-item {
+  display: flex;
+  margin: 20px 10px;
+}
+
+.cart-item .right-block {
+  padding: 10px 8px;
+}
+
+.cart-item-actions {
+  margin-top: 10xp;
+}
+
+.action-icons {
+  margin-right: 5px;
+}
+
+.action-icons:hover {
+  cursor: pointer;
+}
