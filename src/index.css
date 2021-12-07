@@ -22,6 +22,8 @@ body {
 
 .action-icons {
   margin-right: 5px;
+  height: 25px;
+  width: 25px;
 }
 
 .action-icons:hover {
