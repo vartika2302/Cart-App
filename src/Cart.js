@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './CartItem';
+import Navbar from './Navbar';
 
 
 class Cart extends React.Component {
@@ -73,6 +74,8 @@ class Cart extends React.Component {
     render() {
         const {products} = this.state;
         return (
+            <React.Fragment>
+            <Navbar/>
             <div className="cart">
             {/* <CartItem title={'Watch'} price={1500} qty='5' img={''}/> */}
             {products.map((product)=>{
@@ -88,6 +91,8 @@ class Cart extends React.Component {
                  />
             })}
             </div>
+            </React.Fragment>
+            
             
         );
     }

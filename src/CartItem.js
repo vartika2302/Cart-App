@@ -1,7 +1,6 @@
 
 import React from 'react';
 
-
 class CartItem extends React.Component {
     // state
     // constructor() {
@@ -113,7 +112,6 @@ class CartItem extends React.Component {
         return (
             <React.Fragment>
                 <div class="cart-item">
-
                 {/* {this.props.jsx} */}
 
             <div className = "left-block">
