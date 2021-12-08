@@ -9,15 +9,16 @@ body {
 
 .cart-item {
   display: flex;
-  margin: 20px 10px;
+  margin: 20px 15px;
 }
 
 .cart-item .right-block {
-  padding: 10px 8px;
+  padding: 0 8px;
+  margin-left: 10px;
 }
 
 .cart-item-actions {
-  margin-top: 10xp;
+  margin-top: 10px;
 }
 
 .action-icons {
@@ -28,4 +29,9 @@ body {
 
 .action-icons:hover {
   cursor: pointer;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
 }

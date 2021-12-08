@@ -53,7 +53,8 @@ class CartItem extends React.Component {
         ()=>{
             console.log('this.state', this.state);
         });
-
+        
+        
         //using setState() form 1---------------
         //In any event handler, no matter how many times we call setState() function, due to the 
         //concept of 'Batching' in react it will merge all the setState() calls into one & 
