@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-class CartItem extends React.Component {
+const CartItem = (props) => {
     // state
     // constructor() {
     //     super();
@@ -103,11 +103,10 @@ class CartItem extends React.Component {
     //         }
     //     });
     // }
-    render() {
         //props
-        console.log('this.props',this.props);
-        const {product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct} = this.props;
-        const {title,price,qty} = this.props.product;
+        //In react, data flows only in one direction i.e., from parent to children via 'props'.
+        const {product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct} = props;
+        const {title,price,qty} = props.product;
         //const {title, price, qty} = this.state;
         return (
             <React.Fragment>
@@ -115,7 +114,7 @@ class CartItem extends React.Component {
                 {/* {this.props.jsx} */}
 
             <div className = "left-block">
-                <img style = {styles.image}/>
+                <img src={product.img} style = {styles.image}/>
             </div>
             <div className = "right-block">
             <div style = {{fontSize: 24}}>{title}</div>
@@ -133,15 +132,13 @@ class CartItem extends React.Component {
             </div>
             </React.Fragment>
         );
-    }
 }
 
 const styles = {
     image: {
-        width: 110,
-        height: 110,
-        borderRadius: 4,
-        background: 'grey'
+        width: 150,
+        height: 150,
+        borderRadius: 4
     }
 }
 

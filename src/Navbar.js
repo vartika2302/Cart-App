@@ -17,12 +17,12 @@ import React from 'react';
 //Above is a class component & it don't have any state and we will change it to a functional component. And in that 'props' is send
 //as an argument of the function by default.
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div style={styles.navbar}>
         <div style={styles.cartImageContainer}>
         <img style={styles.cartImage} src="https://cdn-icons.flaticon.com/png/512/2838/premium/2838895.png?token=exp=1638975737~hmac=f9054daa0dc4cd2510e31a51f54384e7" alt="cartImage"/>
-        <span style={styles.cartCount}>3</span>
+        <span style={styles.cartCount}>{props.count}</span>
         </div>
         </div>
     );
@@ -53,8 +53,8 @@ const styles = {
         textAlign: 'center',
         backgroundColor: 'Yellow',
         color: 'black',
-        borderRadius: '50%'
-
+        borderRadius: '50%',
+        boxShadow: 'grey'
     }
 
 };
