@@ -4,19 +4,19 @@ import React from 'react';
 
 class CartItem extends React.Component {
     // state
-    constructor() {
-        super();
-        this.state = {
-            title: 'Phone',
-            price: 9999,
-            qty: 1,
-            img: ''
-        }
-        //this.increaseQty = this.increaseQty.bind(this);
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         title: 'Phone',
+    //         price: 9999,
+    //         qty: 1,
+    //         img: ''
+    //     }
+    //     //this.increaseQty = this.increaseQty.bind(this);
 
 
-        // this.testing();
-    }
+    //     // this.testing();
+    // }
     increaseQty = () => {
         //this.state.qty += 1 
         //console.log('this', this.state);
@@ -105,10 +105,17 @@ class CartItem extends React.Component {
         });
     }
     render() {
-        const {title, price, qty} = this.state;
+        //props
+        console.log('this.props',this.props);
+
+        const {title,price,qty} = this.props.product;
+        //const {title, price, qty} = this.state;
         return (
             <React.Fragment>
                 <div class="cart-item">
+
+                {/* {this.props.jsx} */}
+                
             <div className = "left-block">
                 <img style = {styles.image}/>
             </div>
