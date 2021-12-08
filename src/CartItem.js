@@ -107,7 +107,7 @@ class CartItem extends React.Component {
     render() {
         //props
         console.log('this.props',this.props);
-
+        const {product,onIncreaseQuantity,onDecreaseQuantity,onDeleteProduct} = this.props;
         const {title,price,qty} = this.props.product;
         //const {title, price, qty} = this.state;
         return (
@@ -126,10 +126,10 @@ class CartItem extends React.Component {
             <div className = "cart-item-actions">
                 {/* cart-items */}
                 
-                <img src="https://cdn-icons.flaticon.com/png/512/3303/premium/3303893.png?token=exp=1638886795~hmac=5969a789d2dcadb14e556c224c5e1256" alt="increase" className="action-icons" /*onClick={this.increaseQty}*/onClick={()=>this.props.onIncreaseQuantity(this.props.product)}/>
-                <img src="https://cdn-icons.flaticon.com/png/512/2740/premium/2740679.png?token=exp=1638886667~hmac=865f7e7800adabc3ba146acf462b83f5" alt="decrease" className="action-icons" /*onClick={this.decreaseQty}*/onClick={()=>this.props.onDecreaseQuantity(this.props.product)}/>
+                <img src="https://cdn-icons.flaticon.com/png/512/3303/premium/3303893.png?token=exp=1638886795~hmac=5969a789d2dcadb14e556c224c5e1256" alt="increase" className="action-icons" /*onClick={this.increaseQty}*/onClick={()=>onIncreaseQuantity(product)}/>
+                <img src="https://cdn-icons.flaticon.com/png/512/2740/premium/2740679.png?token=exp=1638886667~hmac=865f7e7800adabc3ba146acf462b83f5" alt="decrease" className="action-icons" /*onClick={this.decreaseQty}*/onClick={()=>onDecreaseQuantity(product)}/>
                 
-                <img src="https://cdn-icons.flaticon.com/png/512/484/premium/484560.png?token=exp=1638886897~hmac=8aa28a55d26e67f55c15d571208cce8f" alt="delete" className="action-icons"/>
+                <img src="https://cdn-icons.flaticon.com/png/512/484/premium/484560.png?token=exp=1638886897~hmac=8aa28a55d26e67f55c15d571208cce8f" alt="delete" className="action-icons" onClick={()=>onDeleteProduct(product.id)}/>
             </div>
             </div>
             </div>
