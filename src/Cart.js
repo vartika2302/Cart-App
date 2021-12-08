@@ -35,6 +35,18 @@ class Cart extends React.Component {
 
         // this.testing();
     }
+
+    // On increase quantity
+    handleIncreaseQuantity = (product) => {
+        //console.log('Please increase the quantity of the product by 1',product);
+        const {products} = this.state;
+        const index = products.indexOf(product);
+        products[index].qty += 1;
+        this.setState({
+            products: products
+        });
+    }
+
     render() {
         const {products} = this.state;
         return (
@@ -44,9 +56,10 @@ class Cart extends React.Component {
                 return <CartItem
                  product={product} 
                  key={product.id}
-                 func={()=>console.log('hello')}
-                 jsx={<h1>heelo</h1>}
-                 isLoggedIn={false}
+                //  func={()=>console.log('hello')}
+                //  jsx={<h1>heelo</h1>}
+                //  isLoggedIn={false}
+                onIncreaseQuantity = {this.handleIncreaseQuantity}
                  />
             })}
             </div>
